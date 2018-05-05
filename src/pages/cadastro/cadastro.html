@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Cadastro</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <form (ngSubmit)="agendar()" #form="ngForm">
+    <ion-item>
+      <ion-label floating> Nome: </ion-label>
+      <ion-input [(ngModel)]="nome" name="nome" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating> Endereço: </ion-label>
+      <ion-input [(ngModel)]="endereco" name="endereco" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating> E-mail: </ion-label>
+      <ion-input [(ngModel)]="email" name="email" type="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating> Data: </ion-label>
+      <ion-datetime [(ngModel)]="data" name="data" displayFormat="DD/MM/YY" value=0></ion-datetime>
+    </ion-item>
+  </form>
+  <ion-fab top right edge>
+    <button ion-fab (click)="form.ngSubmit.emit()">
+      <ion-icon name="send"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>

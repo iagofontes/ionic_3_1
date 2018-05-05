@@ -8,14 +8,9 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-item *ngFor="let carro of carros">
+    <ion-item *ngFor="let carro of carros" (click)="selecionarCarro(carro)">
       {{carro.nome}}
       <p>{{carro.preco}}</p>
     </ion-item>
   </ion-list>
-  <!-- App para treinamento alura -->
-  <!-- The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p> -->
 </ion-content>
